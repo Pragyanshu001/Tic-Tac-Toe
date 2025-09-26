@@ -3,63 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>tic tac toe</title>
+    <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- link for bootstrap css style -->
     <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
     />
   </head>
   <body>
-    <nav>
-      <ul>
-        <li>Mytictactoe.com</li>
-      </ul>
-    </nav>
+    <div class="header">
+      <h1>Tic Tac Toe</h1>
+      <div class="underline"></div>
+    </div>
+
+    <div class="players-section">
+      <div class="player-card active-player" id="playerX-card">
+        <div class="player-avatar">
+          <img
+            src="https://api.dicebear.com/7.x/pixel-art/svg?seed=Atavus"
+            alt="Player X Avatar"
+          />
+        </div>
+        <span class="player-name">Me</span>
+        <span class="player-symbol">X</span>
+      </div>
+
+      <div class="player-card" id="playerO-card">
+        <div class="player-avatar">
+          <img
+            src="https://api.dicebear.com/7.x/pixel-art/svg?seed=Kimera"
+            alt="Player O Avatar"
+          />
+        </div>
+        <span class="player-name">You</span>
+        <span class="player-symbol">O</span>
+        <span class="your-turn-text" style="display: none">Your Turn</span>
+      </div>
+    </div>
 
     <div class="gameContainer">
       <div class="Container">
-        <div class="line"></div>
-        <div class="box bl-0 bt-0"><spam class="boxtext"></spam></div>
-        <div class="box bt-0"><spam class="boxtext"></spam></div>
-        <div class="box br-0 bt-0"><spam class="boxtext"></spam></div>
-        <div class="box bl-0"><spam class="boxtext"></spam></div>
-        <div class="box"><spam class="boxtext"></spam></div>
-        <div class="box br-0"><spam class="boxtext"></spam></div>
-        <div class="box bl-0 bb-0"><spam class="boxtext"></spam></div>
-        <div class="box bb-0"><spam class="boxtext"></spam></div>
-        <div class="box br-0 bb-0"><spam class="boxtext"></spam></div>
-      </div>
-      <div class="gameInfo">
-        <h3>Wellcome to MyTicTacToe</h3>
-        <div>
-          <span class="Info">turn for X</span>
-          <button onclick="reset()" id="reset">Reset</button>
-        </div>
-        <div class="image-box">
-          <img width="200px" src="Winner.gif" alt="" class="imgBox" />
-        </div>
+        <div class="box"><span class="boxtext"></span></div>
+        <div class="box"><span class="boxtext"></span></div>
+        <div class="box"><span class="boxtext"></span></div>
+        <div class="box"><span class="boxtext"></span></div>
+        <div class="box"><span class="boxtext"></span></div>
+        <div class="box"><span class="boxtext"></span></div>
+        <div class="box"><span class="boxtext"></span></div>
+        <div class="box"><span class="boxtext"></span></div>
+        <div class="box"><span class="boxtext"></span></div>
       </div>
     </div>
+
+    <button id="reset" class="reset-button">Reset Game</button>
+
+    <div class="image-box">
+      <img src="Winner.gif" alt="Winner celebration" class="imgBox" />
+    </div>
+
     <script src="script.js"></script>
-    <!-- Links for bootstrap js -->
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
